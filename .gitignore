@@ -1,0 +1,10 @@
+# arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# dependências (caso um dia use)
+node_modules/
+
+# rascunhos locais
+*.log
+.env

@@ -8,21 +8,46 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="css/style.css">
 </head>
+<!--
+  ============================================================
+  DADOS A PREENCHER ANTES DE PUBLICAR (subir para a branch main)
+  Faça "localizar e substituir" de cada token abaixo em TODO o arquivo:
+
+    {{CREA}}            → nº do CREA-MG do Diego (ex.: CREA-MG 123456)
+    {{WHATSAPP_URL}}    → link do WhatsApp (ex.: https://wa.me/5531988887777)
+    {{TELEFONE}}        → telefone exibido (ex.: (31) 9 8888-7777)
+    {{EMAIL}}           → e-mail de contato (ex.: contato@dlc.com.br)
+    {{INSTAGRAM_URL}}   → link do Instagram (ex.: https://instagram.com/dlc.construtora)
+    {{INSTAGRAM}}       → @ do Instagram (ex.: @dlc.construtora)
+    {{CNPJ}}            → CNPJ da DLC (ou remova a linha, se ainda não houver)
+    {{PRAZO}}           → prazo médio de retorno (ex.: 12 a 18 meses)
+    {{MINIMO}}          → ticket mínimo de investimento (ex.: R$ 50 mil)
+    {{OBRAS}}           → nº de obras já entregues (ex.: 30)
+
+  SEÇÃO "OBRAS ENTREGIDAS": trocar cada .ph por uma <img> real e preencher
+  {{OBRA_N_LOCAL}} / {{OBRA_N_INFO}}.
+  SEÇÃO "DEPOIMENTOS": preencher {{DEPOIMENTO_N}} / {{NOME_N}} / {{BAIRRO_N}}
+  com depoimentos reais (ou remover a seção até ter os primeiros).
+  ============================================================
+-->
 <body>
 
 <header class="nav">
   <div class="wrap nav-inner">
     <a href="#top" class="brand" aria-label="DLC Construtora">
-      <svg width="40" height="32" viewBox="0 0 62 50" aria-hidden="true"><path d="M6 30 L31 8 L56 30" fill="none" stroke="#C1A265" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="43" x2="50" y2="43" stroke="#C1A265" stroke-width="2.4" stroke-linecap="round"/><line x1="31" y1="8" x2="31" y2="19" stroke="#C1A265" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <svg class="mark" width="30" height="24" viewBox="0 0 62 50" aria-hidden="true">
+        <path d="M6 30 L31 8 L56 30" fill="none" stroke="#C1A265" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="12" y1="43" x2="50" y2="43" stroke="#C1A265" stroke-width="2" stroke-linecap="round"/>
+        <line x1="31" y1="8" x2="31" y2="19" stroke="#C1A265" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
       <span class="mono">DLC</span>
     </a>
     <nav class="nav-links" id="menu">
       <a href="#como">Como funciona</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
+      <a href="#obras">Obras</a>
+      <a href="#faq">Dúvidas</a>
       <a href="#contato" class="btn btn-gold">Quero investir</a>
     </nav>
     <button class="nav-toggle" id="toggle" aria-label="Abrir menu" aria-expanded="false">
@@ -36,14 +61,15 @@
   <div class="wrap hero-inner">
     <span class="eyebrow">DLC Construtora · Belo Horizonte</span>
     <h1>Invista na obra e receba <em>20% de lucro</em> sobre o valor aplicado.</h1>
-    <p class="lead">Funciona assim: o Diego acha o terreno, toca a construção e acompanha a obra do começo ao fim. Você entra com o investimento e, na entrega, recebe o valor de volta mais 20% de lucro, tudo combinado em contrato. São mais de 15 anos construindo em Belo Horizonte.</p>
+    <p class="lead">Funciona assim: o Diego acha o terreno, toca a construção e acompanha a obra do começo ao fim. Você entra com o investimento e, na entrega — em torno de {{PRAZO}} —, recebe o valor de volta mais 20% de lucro, tudo combinado em contrato. São mais de 15 anos construindo em Belo Horizonte.</p>
     <div class="hero-cta">
       <a href="#contato" class="btn btn-gold">Quero investir</a>
       <a href="#como" class="btn btn-ghost">Como funciona</a>
     </div>
+    <p class="hero-meta">Investimento a partir de {{MINIMO}} · retorno e prazos definidos em contrato.</p>
   </div>
   <div class="hero-mark" aria-hidden="true">
-    <svg width="230" height="186" viewBox="0 0 62 50" preserveAspectRatio="xMaxYMax meet" style="width:230px;height:auto;opacity:.13"><path d="M6 30 L31 8 L56 30" fill="none" stroke="#C1A265" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="43" x2="50" y2="43" stroke="#C1A265" stroke-width="0.6" stroke-linecap="round"/></svg>
+    <svg width="220" height="178" viewBox="0 0 62 50" preserveAspectRatio="xMaxYMax meet" style="width:220px;height:auto;opacity:.13"><path d="M6 30 L31 8 L56 30" fill="none" stroke="#C1A265" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="43" x2="50" y2="43" stroke="#C1A265" stroke-width="0.6" stroke-linecap="round"/><line x1="31" y1="8" x2="31" y2="19" stroke="#C1A265" stroke-width="0.5" stroke-linecap="round"/></svg>
   </div>
 </section>
 
@@ -51,7 +77,7 @@
   <div class="wrap stats-inner">
     <div class="stat reveal"><div class="n">20%</div><div class="l">de lucro sobre o investido</div></div>
     <div class="stat reveal"><div class="n">15+</div><div class="l">anos construindo</div></div>
-    <div class="stat reveal"><div class="n">BH</div><div class="l">Belo Horizonte e região</div></div>
+    <div class="stat reveal"><div class="n">{{OBRAS}}+</div><div class="l">obras entregues em BH</div></div>
   </div>
 </div>
 <div class="contract-note"><span>Retorno e prazos definidos em contrato.</span></div>
@@ -72,7 +98,7 @@
       <div class="step">
         <div class="num">2</div>
         <h3>Você investe</h3>
-        <p>Você aplica o valor combinado. O contrato deixa tudo no papel: prazo, retorno e de quem é cada responsabilidade.</p>
+        <p>Você aplica o valor combinado (a partir de {{MINIMO}}). O contrato deixa tudo no papel: prazo, retorno e de quem é cada responsabilidade.</p>
       </div>
       <div class="step">
         <div class="num">3</div>
@@ -85,6 +111,7 @@
         <p>Na entrega, volta pra você o valor investido mais os 20% de lucro combinados lá no começo.</p>
       </div>
     </div>
+    <p class="how-note reveal">E o risco? Obra é obra: a DLC trabalha para reduzir imprevistos com planejamento e acompanhamento de perto, mas nada é prometido no vento. Prazo, garantias e o que acontece se algo atrasar ficam escritos no contrato e são explicados antes de você assinar. <a href="#faq">Veja as dúvidas mais comuns →</a></p>
   </div>
 </section>
 
@@ -101,8 +128,49 @@
       <p>Antes da DLC, tocou obra própria na 2D Construções. É ele quem acompanha cada investimento de perto, do terreno até a chave na mão.</p>
       <div class="sig">
         <div class="name">Diego Souza</div>
-        <div class="role">Engenheiro Civil · CREA-MG 000000</div>
+        <div class="role">Engenheiro Civil · {{CREA}}</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="obras" id="obras">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="cota">Obras entregues</div>
+      <h2>Prédio pronto vale mais que promessa.</h2>
+      <p>Alguns dos projetos que o Diego tocou em Belo Horizonte e região — do terreno à entrega da chave.</p>
+    </div>
+    <div class="gallery reveal">
+      <figure class="shot"><div class="ph">Foto da obra</div><figcaption>{{OBRA_1_LOCAL}} · {{OBRA_1_INFO}}</figcaption></figure>
+      <figure class="shot"><div class="ph">Foto da obra</div><figcaption>{{OBRA_2_LOCAL}} · {{OBRA_2_INFO}}</figcaption></figure>
+      <figure class="shot"><div class="ph">Foto da obra</div><figcaption>{{OBRA_3_LOCAL}} · {{OBRA_3_INFO}}</figcaption></figure>
+      <figure class="shot"><div class="ph">Foto da obra</div><figcaption>{{OBRA_4_LOCAL}} · {{OBRA_4_INFO}}</figcaption></figure>
+      <figure class="shot"><div class="ph">Foto da obra</div><figcaption>{{OBRA_5_LOCAL}} · {{OBRA_5_INFO}}</figcaption></figure>
+      <figure class="shot"><div class="ph">Foto da obra</div><figcaption>{{OBRA_6_LOCAL}} · {{OBRA_6_INFO}}</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="quotes" id="depoimentos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="cota">Quem já investiu</div>
+      <h2>O que dizem sobre trabalhar com o Diego.</h2>
+    </div>
+    <div class="quote-grid reveal">
+      <blockquote class="quote">
+        <p>“{{DEPOIMENTO_1}}”</p>
+        <cite><span class="qn">{{NOME_1}}</span><span class="qr">{{BAIRRO_1}}</span></cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p>“{{DEPOIMENTO_2}}”</p>
+        <cite><span class="qn">{{NOME_2}}</span><span class="qr">{{BAIRRO_2}}</span></cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p>“{{DEPOIMENTO_3}}”</p>
+        <cite><span class="qn">{{NOME_3}}</span><span class="qr">{{BAIRRO_3}}</span></cite>
+      </blockquote>
     </div>
   </div>
 </section>
@@ -110,9 +178,9 @@
 <section class="services" id="servicos">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="cota">Também fazemos</div>
-      <h2>Não é só investimento.</h2>
-      <p>Precisa resolver uma obra ou reforma? A DLC também atende direto.</p>
+      <div class="cota">Além do investimento</div>
+      <h2>Precisa resolver uma obra? A gente também faz.</h2>
+      <p>Fora a captação de investimento, a DLC atende direto quem precisa construir, reformar ou tirar um projeto do papel.</p>
     </div>
     <div class="svc-grid reveal">
       <div class="svc">
@@ -139,6 +207,50 @@
   </div>
 </section>
 
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="cota">Dúvidas frequentes</div>
+      <h2>O que todo investidor pergunta antes.</h2>
+      <p>Sem letra miúda. Se ficar qualquer dúvida, é só chamar o Diego.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>Em quanto tempo recebo meu dinheiro de volta com os 20%?</summary>
+        <div class="fa"><p>O retorno acontece na entrega da obra, em torno de {{PRAZO}}. O prazo exato de cada projeto fica definido em contrato antes de você investir — nada de data solta no ar.</p></div>
+      </details>
+      <details>
+        <summary>Qual é o valor mínimo para investir?</summary>
+        <div class="fa"><p>O ticket mínimo é a partir de {{MINIMO}}. Dependendo da obra, dá pra ajustar o valor — o Diego explica o que faz sentido para cada projeto.</p></div>
+      </details>
+      <details>
+        <summary>Os 20% são garantidos? E se a obra der prejuízo?</summary>
+        <div class="fa"><p>Vamos ser honestos: construção tem risco, como qualquer negócio. O que a DLC faz é reduzir esse risco com terreno bem escolhido, planejamento e acompanhamento de perto. O retorno combinado, os prazos e o que acontece em caso de atraso ou imprevisto ficam todos previstos em contrato — você lê e entende tudo antes de assinar.</p></div>
+      </details>
+      <details>
+        <summary>Isso é uma aplicação financeira regulada (tipo banco ou CVM)?</summary>
+        <div class="fa"><p>Não. A DLC não é banco, corretora nem instituição financeira. O que você faz é uma parceria de construção formalizada em contrato entre você e a DLC — o seu dinheiro vai para uma obra real, com terreno e endereço, não para um fundo ou aplicação.</p></div>
+      </details>
+      <details>
+        <summary>De quem é o terreno enquanto a obra acontece?</summary>
+        <div class="fa"><p>Isso é definido caso a caso e fica registrado em contrato, junto com as garantias da operação. O Diego mostra a documentação do terreno e explica a estrutura antes de qualquer aporte.</p></div>
+      </details>
+      <details>
+        <summary>Consigo acompanhar a obra de perto?</summary>
+        <div class="fa"><p>Consegue, e é parte do combinado. Você acompanha o andamento do começo ao fim, com atualizações e visita ao canteiro. Sem sumiço.</p></div>
+      </details>
+      <details>
+        <summary>A DLC também faz obra ou reforma para mim, sem ser investimento?</summary>
+        <div class="fa"><p>Faz. Além da captação de investimento, a DLC atende reforma, consultoria, projetos e execução hidráulica direto para quem precisa. É só falar o que você tem em mente.</p></div>
+      </details>
+      <details>
+        <summary>Como eu começo?</summary>
+        <div class="fa"><p>Chame o Diego no WhatsApp contando o que você pensa em investir. Ele explica os números, mostra as obras e os próximos passos, sem compromisso e sem enrolação.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="cta-band" id="contato">
   <div class="grid-bg"></div>
   <div class="wrap inner">
@@ -146,8 +258,8 @@
     <h2 class="reveal">Tem interesse em investir com a gente?</h2>
     <p class="reveal">Manda uma mensagem pro Diego contando o que você tem em mente. Ele explica os números e os próximos passos, sem enrolação.</p>
     <div class="reveal" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-      <a href="https://wa.me/5531999999999" class="btn btn-gold">Chamar no WhatsApp</a>
-      <a href="mailto:contato@dlc.com.br" class="btn btn-ghost">Enviar e-mail</a>
+      <a href="{{WHATSAPP_URL}}" class="btn btn-gold">Chamar no WhatsApp</a>
+      <a href="mailto:{{EMAIL}}" class="btn btn-ghost">Enviar e-mail</a>
     </div>
   </div>
 </section>
@@ -156,7 +268,11 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <svg width="46" height="37" viewBox="0 0 62 50" style="margin-bottom:8px" aria-hidden="true"><path d="M6 30 L31 8 L56 30" fill="none" stroke="#C1A265" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="43" x2="50" y2="43" stroke="#C1A265" stroke-width="1.8" stroke-linecap="round"/><line x1="31" y1="8" x2="31" y2="19" stroke="#C1A265" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg width="40" height="32" viewBox="0 0 62 50" style="margin-bottom:8px" aria-hidden="true">
+          <path d="M6 30 L31 8 L56 30" fill="none" stroke="#C1A265" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="12" y1="43" x2="50" y2="43" stroke="#C1A265" stroke-width="2" stroke-linecap="round"/>
+          <line x1="31" y1="8" x2="31" y2="19" stroke="#C1A265" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
         <div class="mono">DLC</div>
         <p>Construtora em Belo Horizonte. Investimento em construção com retorno em contrato, além de reformas, projetos e execução.</p>
       </div>
@@ -169,14 +285,15 @@
       </div>
       <div class="foot-col">
         <h5>Contato</h5>
-        <a href="https://wa.me/5531999999999">WhatsApp · (31) 9 9999-9999</a>
-        <a href="mailto:contato@dlc.com.br">contato@dlc.com.br</a>
-        <a href="https://instagram.com/dlc.construtora">@dlc.construtora</a>
+        <a href="{{WHATSAPP_URL}}">WhatsApp · {{TELEFONE}}</a>
+        <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+        <a href="{{INSTAGRAM_URL}}">{{INSTAGRAM}}</a>
         <span>Belo Horizonte · MG</span>
       </div>
     </div>
+    <p class="legal">A DLC Construtora não é instituição financeira. O investimento em obra é uma parceria de construção formalizada em contrato, com retorno e prazos previstos em documento e sujeita aos riscos próprios da atividade de construção civil.</p>
     <div class="foot-bottom">
-      <span>© 2025 DLC Construtora · Diego Souza · CREA-MG 000000</span>
+      <span>© 2026 DLC Construtora · CNPJ {{CNPJ}} · {{CREA}}</span>
       <span>Investimento · Construção · Reformas</span>
     </div>
   </div>

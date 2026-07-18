@@ -95,6 +95,8 @@
   .foot-col a,.foot-col span{display:block;font-size:14.5px;color:var(--offwhite);opacity:.82;margin-bottom:9px;transition:opacity .2s}
   .foot-col a:hover{opacity:1;color:var(--gold)}
   .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:12.5px;color:var(--offwhite);opacity:.55;flex-wrap:wrap;gap:10px}
+  .foot-bottom .credit a{color:var(--gold);opacity:1;letter-spacing:.5px;border-bottom:1px solid var(--gold-soft);transition:border-color .2s}
+  .foot-bottom .credit a:hover{border-color:var(--gold)}
 
   .hero-meta{margin-top:26px;font-size:13px;letter-spacing:.4px;color:var(--offwhite);opacity:.62}
 

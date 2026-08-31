@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DLC Construtora · Invista em construção com 20% de lucro | Belo Horizonte</title>
-<meta name="description" content="Invista na construção com a DLC: o Diego acha o terreno, constrói e acompanha a obra. Você recebe o valor investido mais 20% de lucro, definido em contrato. Belo Horizonte e região.">
+<title>DLC Construtora · Casas à venda em Sarzedo e obras em BH</title>
+<meta name="description" content="Construtora em Belo Horizonte e região. Casas Lineares Masterville à venda em Sarzedo-MG: 3 quartos, suíte com closet, 2 vagas, a partir de R$ 590 mil. Reformas, projetos e execução com engenharia própria do terreno à chave.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -15,21 +15,25 @@
   DADOS A PREENCHER ANTES DE PUBLICAR (subir para a branch main)
   Faça "localizar e substituir" de cada token abaixo em TODO o arquivo:
 
-    {{CREA}}            → nº do CREA-MG do Diego (ex.: CREA-MG 123456)
-    {{WHATSAPP_URL}}    → link do WhatsApp (ex.: https://wa.me/5531988887777)
+    {{CREA}}            → nº do CREA-MG do responsável técnico (ex.: CREA-MG 123456)
+    {{WHATSAPP_URL}}    → link do WhatsApp (ex.: https://wa.me/5531988887777
+                          — dica: acrescente ?text=Quero%20visitar%20o%20Masterville
+                          para a conversa já chegar qualificada)
     {{TELEFONE}}        → telefone exibido (ex.: (31) 9 8888-7777)
     {{EMAIL}}           → e-mail de contato (ex.: contato@dlc.com.br)
     {{INSTAGRAM_URL}}   → link do Instagram (ex.: https://instagram.com/dlc.construtora)
     {{INSTAGRAM}}       → @ do Instagram (ex.: @dlc.construtora)
     {{CNPJ}}            → CNPJ da DLC (ou remova a linha, se ainda não houver)
-    {{PRAZO}}           → prazo médio de retorno (ex.: 12 a 18 meses)
-    {{MINIMO}}          → ticket mínimo de investimento (ex.: R$ 50 mil)
     {{OBRAS}}           → nº de obras já entregues (ex.: 30)
+    {{ENTREGA}}         → previsão de entrega / estágio da obra do Masterville
 
-  SEÇÃO "OBRAS ENTREGIDAS": trocar cada .ph por uma <img> real e preencher
+  SEÇÃO "MISSÃO / VISÃO / VALORES": textos rascunho — validar com o cliente.
+  SEÇÃO "OBRAS ENTREGUES": trocar cada .ph por uma <img> real e preencher
   {{OBRA_N_LOCAL}} / {{OBRA_N_INFO}}.
-  SEÇÃO "DEPOIMENTOS": preencher {{DEPOIMENTO_N}} / {{NOME_N}} / {{BAIRRO_N}}
-  com depoimentos reais (ou remover a seção até ter os primeiros).
+  SEÇÃO "DEPOIMENTOS": usar depoimentos REAIS e verificáveis — nome completo,
+  bairro e, se possível, foto real (nada de avatar genérico); depoimento com
+  detalhe concreto converte mais que elogio genérico. Remover a seção até ter
+  os primeiros.
   ============================================================
 -->
 <body>
@@ -45,10 +49,11 @@
       <span class="mono">DLC</span>
     </a>
     <nav class="nav-links" id="menu">
-      <a href="#como">Como funciona</a>
-      <a href="#obras">Obras</a>
+      <a href="#masterville">Empreendimento</a>
+      <a href="#sobre">A DLC</a>
+      <a href="#servicos">Serviços</a>
       <a href="#faq">Dúvidas</a>
-      <a href="#contato" class="btn btn-gold">Quero investir</a>
+      <a href="{{WHATSAPP_URL}}" class="btn btn-gold">Agendar visita</a>
     </nav>
     <button class="nav-toggle" id="toggle" aria-label="Abrir menu" aria-expanded="false">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
@@ -59,76 +64,150 @@
 <section class="hero" id="top" style="padding:0">
   <div class="grid-bg"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow">DLC Construtora · Belo Horizonte</span>
-    <h1>Invista na obra e receba <em>20% de lucro</em> sobre o valor aplicado.</h1>
-    <p class="lead">Funciona assim: o Diego acha o terreno, toca a construção e acompanha a obra do começo ao fim. Você entra com o investimento e, na entrega — em torno de {{PRAZO}} —, recebe o valor de volta mais 20% de lucro, tudo combinado em contrato. São mais de 15 anos construindo em Belo Horizonte.</p>
+    <span class="eyebrow">DLC Construtora · Belo Horizonte e região</span>
+    <h1>Construímos a casa onde a sua <em>história</em> começa.</h1>
+    <p class="lead">Casas térreas de 3 quartos com suíte, quintal e churrasqueira em Sarzedo — prontas para a sua família, construídas pela mesma equipe de engenharia que há mais de 15 anos planeja, executa e entrega obras em BH e região.</p>
     <div class="hero-cta">
-      <a href="#contato" class="btn btn-gold">Quero investir</a>
-      <a href="#como" class="btn btn-ghost">Como funciona</a>
+      <a href="{{WHATSAPP_URL}}" class="btn btn-gold">Agendar visita no WhatsApp</a>
+      <a href="#masterville" class="btn btn-ghost">Ver o Masterville</a>
     </div>
-    <p class="hero-meta">Investimento a partir de {{MINIMO}} · retorno e prazos definidos em contrato.</p>
+    <p class="hero-meta">Resposta no mesmo dia · visita sem compromisso · Sarzedo-MG</p>
   </div>
   <div class="hero-mark" aria-hidden="true">
     <svg width="220" height="178" viewBox="0 0 62 50" preserveAspectRatio="xMaxYMax meet" style="width:220px;height:auto;opacity:.13"><path d="M6 30 L31 8 L56 30" fill="none" stroke="#C1A265" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="43" x2="50" y2="43" stroke="#C1A265" stroke-width="0.6" stroke-linecap="round"/><line x1="31" y1="8" x2="31" y2="19" stroke="#C1A265" stroke-width="0.5" stroke-linecap="round"/></svg>
   </div>
 </section>
 
+<a class="launch-strip" href="#masterville">
+  <div class="wrap launch-inner">
+    <span class="launch-tag">Em vendas</span>
+    <span class="launch-name">Casas Lineares Masterville · Sarzedo-MG</span>
+    <span class="launch-price">R$ 590.000 por casa · somente 2 unidades</span>
+    <span class="launch-arrow">Conhecer →</span>
+  </div>
+</a>
+
 <div class="stats">
   <div class="wrap stats-inner">
-    <div class="stat reveal"><div class="n">20%</div><div class="l">de lucro sobre o investido</div></div>
     <div class="stat reveal"><div class="n">15+</div><div class="l">anos construindo</div></div>
-    <div class="stat reveal"><div class="n">{{OBRAS}}+</div><div class="l">obras entregues em BH</div></div>
+    <div class="stat reveal"><div class="n">{{OBRAS}}+</div><div class="l">obras entregues em BH e região</div></div>
+    <div class="stat reveal"><div class="n">2</div><div class="l">casas à venda no Masterville</div></div>
   </div>
 </div>
-<div class="contract-note"><span>Retorno e prazos definidos em contrato.</span></div>
 
-<section class="how" id="como">
+<section class="emp" id="masterville">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="cota">Como funciona</div>
-      <h2>Do terreno ao lucro, sem você precisar entender de obra.</h2>
-      <p>São quatro passos. O trabalho pesado fica com o Diego; você acompanha e recebe no fim.</p>
+      <div class="cota">Empreendimento em vendas</div>
+      <h2>Casas Lineares Masterville, em Sarzedo.</h2>
+      <p>Duas casas térreas, lado a lado, na Alameda Ipê Branco. Projeto residencial linear pensado para conforto, ventilação natural e integração entre os ambientes — um lançamento DLC.</p>
     </div>
-    <div class="steps reveal">
-      <div class="step">
-        <div class="num">1</div>
-        <h3>A gente acha o terreno</h3>
-        <p>O Diego procura terrenos com bom potencial de retorno em Belo Horizonte e região. Você não precisa caçar oportunidade.</p>
+
+    <figure class="emp-hero reveal">
+      <img src="assets/masterville/fachada-noite.jpg" alt="Fachada noturna das Casas Lineares Masterville, em Sarzedo-MG" loading="lazy">
+    </figure>
+
+    <div class="emp-grid reveal">
+      <div class="price-card">
+        <div class="pc-label">Valor por residência</div>
+        <div class="pc-price">R$ 590.000</div>
+        <div class="pc-scarcity">Somente 2 unidades disponíveis</div>
+        <div class="pc-specs">
+          <div><b>180 m²</b><span>terreno</span></div>
+          <div><b>86 m²</b><span>construída</span></div>
+          <div><b>3</b><span>quartos (1 suíte)</span></div>
+          <div><b>2</b><span>vagas amplas</span></div>
+        </div>
+        <a href="{{WHATSAPP_URL}}" class="btn btn-gold pc-btn">Agendar visita no WhatsApp</a>
+        <div class="click-trigger">Resposta no mesmo dia · sem compromisso</div>
+        <a href="assets/masterville/apresentacao-masterville.pdf" class="pc-pdf" download>Baixar apresentação (PDF)</a>
       </div>
-      <div class="step">
-        <div class="num">2</div>
-        <h3>Você investe</h3>
-        <p>Você aplica o valor combinado (a partir de {{MINIMO}}). O contrato deixa tudo no papel: prazo, retorno e de quem é cada responsabilidade.</p>
-      </div>
-      <div class="step">
-        <div class="num">3</div>
-        <h3>A DLC constrói</h3>
-        <p>A obra é executada e acompanhada do primeiro dia até a entrega. Você vê o andamento de perto, sem sumiço.</p>
-      </div>
-      <div class="step">
-        <div class="num">4</div>
-        <h3>Você recebe com lucro</h3>
-        <p>Na entrega, volta pra você o valor investido mais os 20% de lucro combinados lá no começo.</p>
+      <div class="emp-info">
+        <h3>Cada espaço pensado para o dia a dia.</h3>
+        <div class="amb-lists">
+          <div>
+            <h4>Internos</h4>
+            <ul>
+              <li>3 quartos, sendo 1 suíte</li>
+              <li>Closet integrado à suíte</li>
+              <li>Sala de estar e sala de jantar</li>
+              <li>Banheiro social</li>
+              <li>Cozinha e área de serviço</li>
+              <li>Infraestrutura para aquecedor solar</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Externos</h4>
+            <ul>
+              <li>Churrasqueira</li>
+              <li>Pergolado</li>
+              <li>Área externa gramada</li>
+              <li>Vagas para 2 carros grandes</li>
+            </ul>
+          </div>
+        </div>
+        <div class="chips">
+          <span>Térrea, sem escadas</span>
+          <span>Suíte com closet</span>
+          <span>Churrasqueira + pergolado</span>
+          <span>Ventilação natural</span>
+          <span>Área verde e paisagismo</span>
+        </div>
       </div>
     </div>
-    <p class="how-note reveal">E o risco? Obra é obra: a DLC trabalha para reduzir imprevistos com planejamento e acompanhamento de perto, mas nada é prometido no vento. Prazo, garantias e o que acontece se algo atrasar ficam escritos no contrato e são explicados antes de você assinar. <a href="#faq">Veja as dúvidas mais comuns →</a></p>
+
+    <div class="emp-gallery reveal">
+      <figure class="shot"><img src="assets/masterville/fachada-dia.jpg" alt="Fachada diurna com muro de pedra e linhas contemporâneas" loading="lazy"><figcaption>Fachada · linhas contemporâneas e materiais nobres</figcaption></figure>
+      <figure class="shot"><img src="assets/masterville/aerea-1.jpg" alt="Vista aérea das duas casas do Masterville" loading="lazy"><figcaption>Vista aérea · duas casas independentes, lado a lado</figcaption></figure>
+      <figure class="shot"><img src="assets/masterville/aerea-2.jpg" alt="Vista aérea aproximada da área externa das casas" loading="lazy"><figcaption>Área externa · churrasqueira, pergolado e gramado</figcaption></figure>
+    </div>
+
+    <div class="emp-planta reveal">
+      <details>
+        <summary>Ver planta baixa · 86 m² de área construída em 180 m² de terreno</summary>
+        <figure><img src="assets/masterville/planta.jpg" alt="Planta baixa das duas casas do Masterville" loading="lazy"></figure>
+      </details>
+    </div>
+
+    <div class="cta-inline reveal">
+      <p>Quer ver a casa de perto antes de decidir?</p>
+      <a href="{{WHATSAPP_URL}}" class="btn btn-gold">Agendar visita no WhatsApp</a>
+    </div>
   </div>
 </section>
 
 <section class="about" id="sobre">
   <div class="wrap about-grid">
-    <div class="portrait reveal" role="img" aria-label="Diego Souza, engenheiro civil">
-      <img src="assets/diego.jpg" alt="Diego Souza, engenheiro civil" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%">
-      <span class="corner tl"></span><span class="corner br"></span>
-    </div>
     <div class="reveal">
-      <div class="cota" style="margin-bottom:22px">Quem toca a obra</div>
-      <h2>Quem cuida do seu dinheiro é o <em>Diego</em>.</h2>
-      <p>Diego Souza é engenheiro civil e trabalha com construção há mais de 15 anos. Passou por orçamento, planejamento e canteiro de obra em prédios residenciais e comerciais aqui em Belo Horizonte, inclusive obras em parede de concreto.</p>
-      <p>Antes da DLC, tocou obra própria na 2D Construções. É ele quem acompanha cada investimento de perto, do terreno até a chave na mão.</p>
+      <div class="cota" style="margin-bottom:22px">Quem somos</div>
+      <h2>Engenharia própria, <em>do terreno à chave</em>.</h2>
+      <p>A DLC é uma construtora de Belo Horizonte com mais de 15 anos de canteiro: orçamento, planejamento e execução de obras residenciais e comerciais, inclusive em parede de concreto.</p>
+      <p>Aqui a obra não passa de mão em mão. A mesma equipe que escolhe o terreno é a que planeja, executa e entrega — com responsabilidade técnica própria e atendimento direto, sem intermediário.</p>
       <div class="sig">
-        <div class="name">Diego Souza</div>
-        <div class="role">Engenheiro Civil · {{CREA}}</div>
+        <div class="role">Responsabilidade técnica · Engenharia Civil · {{CREA}}</div>
+      </div>
+    </div>
+    <div class="jeito reveal">
+      <h3>Nosso jeito de construir</h3>
+      <div class="jeito-step"><span class="jn">1</span><p>Terreno e projeto escolhidos com critério de engenharia, não de vitrine.</p></div>
+      <div class="jeito-step"><span class="jn">2</span><p>Planejamento e orçamento fechados antes de a obra começar.</p></div>
+      <div class="jeito-step"><span class="jn">3</span><p>Execução acompanhada no canteiro, com atualização direta para o cliente.</p></div>
+      <div class="jeito-step"><span class="jn">4</span><p>Entrega no prazo combinado, com contrato claro e garantias registradas.</p></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="mvv reveal">
+      <div class="mvv-card">
+        <h3>Missão</h3>
+        <p>Construir casas e obras de qualidade em BH e região, com preço honesto, prazo cumprido e engenharia presente em cada etapa.</p>
+      </div>
+      <div class="mvv-card">
+        <h3>Visão</h3>
+        <p>Ser referência em casas lineares na região metropolitana de Belo Horizonte, conhecida por entregar exatamente o que promete.</p>
+      </div>
+      <div class="mvv-card">
+        <h3>Valores</h3>
+        <p>Transparência no contrato, qualidade de execução, compromisso com prazo e relação direta entre o cliente e quem constrói.</p>
       </div>
     </div>
   </div>
@@ -138,8 +217,8 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="cota">Obras entregues</div>
-      <h2>Prédio pronto vale mais que promessa.</h2>
-      <p>Alguns dos projetos que o Diego tocou em Belo Horizonte e região — do terreno à entrega da chave.</p>
+      <h2>Obra pronta vale mais que promessa.</h2>
+      <p>Alguns dos projetos que a DLC tocou em Belo Horizonte e região — do terreno à entrega da chave.</p>
     </div>
     <div class="gallery reveal">
       <figure class="shot"><div class="ph">Foto da obra</div><figcaption>{{OBRA_1_LOCAL}} · {{OBRA_1_INFO}}</figcaption></figure>
@@ -155,8 +234,8 @@
 <section class="quotes" id="depoimentos">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="cota">Quem já investiu</div>
-      <h2>O que dizem sobre trabalhar com o Diego.</h2>
+      <div class="cota">Quem já construiu com a gente</div>
+      <h2>O que os clientes dizem da DLC.</h2>
     </div>
     <div class="quote-grid reveal">
       <blockquote class="quote">
@@ -178,9 +257,9 @@
 <section class="services" id="servicos">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="cota">Além do investimento</div>
+      <div class="cota">Além do Masterville</div>
       <h2>Precisa resolver uma obra? A gente também faz.</h2>
-      <p>Fora a captação de investimento, a DLC atende direto quem precisa construir, reformar ou tirar um projeto do papel.</p>
+      <p>A DLC atende quem precisa construir, reformar ou tirar um projeto do papel — do orçamento até a entrega.</p>
     </div>
     <div class="svc-grid reveal">
       <div class="svc">
@@ -211,41 +290,41 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="cota">Dúvidas frequentes</div>
-      <h2>O que todo investidor pergunta antes.</h2>
-      <p>Sem letra miúda. Se ficar qualquer dúvida, é só chamar o Diego.</p>
+      <h2>O que todo mundo pergunta antes de comprar.</h2>
+      <p>Sem letra miúda. Se ficar qualquer dúvida, é só chamar a gente no WhatsApp.</p>
     </div>
     <div class="faq-list reveal">
       <details>
-        <summary>Em quanto tempo recebo meu dinheiro de volta com os 20%?</summary>
-        <div class="fa"><p>O retorno acontece na entrega da obra, em torno de {{PRAZO}}. O prazo exato de cada projeto fica definido em contrato antes de você investir — nada de data solta no ar.</p></div>
+        <summary>Como faço para visitar as casas do Masterville?</summary>
+        <div class="fa"><p>É só chamar a gente no WhatsApp e combinar um horário. A visita é acompanhada pelo engenheiro responsável pela obra, que mostra a casa, o terreno e responde tudo na hora.</p></div>
       </details>
       <details>
-        <summary>Qual é o valor mínimo para investir?</summary>
-        <div class="fa"><p>O ticket mínimo é a partir de {{MINIMO}}. Dependendo da obra, dá pra ajustar o valor — o Diego explica o que faz sentido para cada projeto.</p></div>
+        <summary>Qual é o valor e o que está incluso?</summary>
+        <div class="fa"><p>Cada residência custa R$ 590.000: casa térrea com 86 m² construídos em terreno de 180 m², 3 quartos (1 suíte com closet), churrasqueira, pergolado, área gramada e 2 vagas amplas. A ficha completa está na seção do empreendimento.</p></div>
       </details>
       <details>
-        <summary>Os 20% são garantidos? E se a obra der prejuízo?</summary>
-        <div class="fa"><p>Vamos ser honestos: construção tem risco, como qualquer negócio. O que a DLC faz é reduzir esse risco com terreno bem escolhido, planejamento e acompanhamento de perto. O retorno combinado, os prazos e o que acontece em caso de atraso ou imprevisto ficam todos previstos em contrato — você lê e entende tudo antes de assinar.</p></div>
+        <summary>Quais são as formas de pagamento? Aceita financiamento?</summary>
+        <div class="fa"><p>As condições de pagamento são tratadas caso a caso, direto com a nossa equipe — apresentamos as opções disponíveis para o Masterville, incluindo o caminho do financiamento, e deixamos tudo registrado em contrato antes de qualquer sinal.</p></div>
       </details>
       <details>
-        <summary>Isso é uma aplicação financeira regulada (tipo banco ou CVM)?</summary>
-        <div class="fa"><p>Não. A DLC não é banco, corretora nem instituição financeira. O que você faz é uma parceria de construção formalizada em contrato entre você e a DLC — o seu dinheiro vai para uma obra real, com terreno e endereço, não para um fundo ou aplicação.</p></div>
+        <summary>Quando as casas ficam prontas?</summary>
+        <div class="fa"><p>{{ENTREGA}}. O cronograma da obra e o prazo de entrega ficam definidos em contrato — nada de data solta no ar.</p></div>
       </details>
       <details>
-        <summary>De quem é o terreno enquanto a obra acontece?</summary>
-        <div class="fa"><p>Isso é definido caso a caso e fica registrado em contrato, junto com as garantias da operação. O Diego mostra a documentação do terreno e explica a estrutura antes de qualquer aporte.</p></div>
+        <summary>Dá para personalizar acabamentos?</summary>
+        <div class="fa"><p>Depende do estágio da obra no momento da compra. Em várias etapas ainda dá para ajustar acabamentos e detalhes — na visita, a gente mostra o que ainda é possível mudar.</p></div>
       </details>
       <details>
-        <summary>Consigo acompanhar a obra de perto?</summary>
-        <div class="fa"><p>Consegue, e é parte do combinado. Você acompanha o andamento do começo ao fim, com atualizações e visita ao canteiro. Sem sumiço.</p></div>
+        <summary>A casa tem garantia?</summary>
+        <div class="fa"><p>Tem. As garantias da construção seguem o que manda a legislação e ficam descritas em contrato, junto com o manual de uso da casa entregue com a chave.</p></div>
       </details>
       <details>
-        <summary>A DLC também faz obra ou reforma para mim, sem ser investimento?</summary>
-        <div class="fa"><p>Faz. Além da captação de investimento, a DLC atende reforma, consultoria, projetos e execução hidráulica direto para quem precisa. É só falar o que você tem em mente.</p></div>
+        <summary>A DLC também faz obra ou reforma para mim?</summary>
+        <div class="fa"><p>Faz. Além dos empreendimentos próprios, a DLC atende reforma, consultoria, projetos e execução hidráulica direto para quem precisa. É só falar o que você tem em mente.</p></div>
       </details>
       <details>
         <summary>Como eu começo?</summary>
-        <div class="fa"><p>Chame o Diego no WhatsApp contando o que você pensa em investir. Ele explica os números, mostra as obras e os próximos passos, sem compromisso e sem enrolação.</p></div>
+        <div class="fa"><p>Chame a gente no WhatsApp contando o que você procura — visitar o Masterville, orçar uma reforma ou tirar um projeto do papel. Respondemos sem compromisso e sem enrolação.</p></div>
       </details>
     </div>
   </div>
@@ -255,12 +334,13 @@
   <div class="grid-bg"></div>
   <div class="wrap inner">
     <div class="cota reveal" style="justify-content:center;max-width:320px;margin:0 auto 26px">Bora conversar</div>
-    <h2 class="reveal">Tem interesse em investir com a gente?</h2>
-    <p class="reveal">Manda uma mensagem pro Diego contando o que você tem em mente. Ele explica os números e os próximos passos, sem enrolação.</p>
+    <h2 class="reveal">Quer conhecer nossos empreendimentos de perto?</h2>
+    <p class="reveal">Manda uma mensagem pra gente agendar sua visita ou tirar dúvidas sobre as casas, as obras e as condições.</p>
     <div class="reveal" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-      <a href="{{WHATSAPP_URL}}" class="btn btn-gold">Chamar no WhatsApp</a>
+      <a href="{{WHATSAPP_URL}}" class="btn btn-gold">Agendar visita no WhatsApp</a>
       <a href="mailto:{{EMAIL}}" class="btn btn-ghost">Enviar e-mail</a>
     </div>
+    <p class="click-trigger reveal" style="text-align:center">Resposta no mesmo dia · visita sem compromisso</p>
   </div>
 </section>
 
@@ -274,11 +354,11 @@
           <line x1="31" y1="8" x2="31" y2="19" stroke="#C1A265" stroke-width="1.8" stroke-linecap="round"/>
         </svg>
         <div class="mono">DLC</div>
-        <p>Construtora em Belo Horizonte. Investimento em construção com retorno em contrato, além de reformas, projetos e execução.</p>
+        <p>Construtora em Belo Horizonte e região. Casas próprias, reformas, projetos e execução — engenharia presente do terreno à chave.</p>
       </div>
       <div class="foot-col">
         <h5>O que fazemos</h5>
-        <a href="#como">Investir em obra</a>
+        <a href="#masterville">Casas à venda</a>
         <a href="#servicos">Reformas</a>
         <a href="#servicos">Projetos</a>
         <a href="#servicos">Execução hidráulica</a>
@@ -291,13 +371,17 @@
         <span>Belo Horizonte · MG</span>
       </div>
     </div>
-    <p class="legal">A DLC Construtora não é instituição financeira. O investimento em obra é uma parceria de construção formalizada em contrato, com retorno e prazos previstos em documento e sujeita aos riscos próprios da atividade de construção civil.</p>
+    <p class="legal">Investidores: a DLC também estrutura parcerias de obra. <a href="{{WHATSAPP_URL}}">Fale com a gente</a> para receber a apresentação.</p>
     <div class="foot-bottom">
       <span>© 2026 DLC Construtora · CNPJ {{CNPJ}} · {{CREA}}</span>
       <span class="credit">Desenvolvido por <a href="https://github.com/Triad-Labs-Tech" target="_blank" rel="noopener">Triad Labs</a></span>
     </div>
   </div>
 </footer>
+
+<a href="{{WHATSAPP_URL}}" class="fab-whats" aria-label="Agendar visita pelo WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a9.9 9.9 0 0 0-8.6 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 0 1 12 3.8Zm-3 4.1c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.8 2.2.9 2.6.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.6-.7c.1-.2.1-.3 0-.5L10 8.5c-.2-.4-.4-.5-.6-.5h-.4Z"/></svg>
+</a>
 
 <script>
   var toggle=document.getElementById('toggle'),menu=document.getElementById('menu');
